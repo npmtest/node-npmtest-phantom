@@ -1,5 +1,5 @@
 <html lang="en"><head>
-    <title>Code coverage report for node-npmtest-phantom/phantom/lib/index.js</title>
+    <title>Code coverage report for node-npmtest-phantom/node_modules/phantom/lib/command.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,23 +192,23 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-phantom">npmtest-phantom (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-phantom/phantom/lib/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-phantom/node_modules/phantom/lib/command.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">40% <small>(4 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">37.5% <small>(3 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">0% <small>(0 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">50% <small>(4 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">37.5% <small>(3 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-phantom/phantom/lib/</a> » index.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-phantom/node_modules/phantom/lib/</a> » command.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -230,80 +230,47 @@
 16
 17
 18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+19</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
 &nbsp;
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
+let NEXT_ID = 1;
 &nbsp;
-var _phantom = require('./phantom');
+class Command {
 &nbsp;
-<span class="cstat-no" title="statement not covered">var _phantom2 = _interopRequireDefault(_phantom);</span>
-&nbsp;
-<span class="fstat-no" title="function not covered">function _interopRequireDefault(obj) {</span> <span class="cstat-no" title="statement not covered">return obj &amp;&amp; obj.__esModule ? obj : { default: obj }; </span>}
-&nbsp;
-/**
- * Retuns a Promise of a new Phantom class instance
- * @param args command args to pass to phantom process
- * @param [config] configuration object
- * @param [config.phantomPath] path to phantomjs executable
- * @param [config.logger] object containing functions used for logging
- * @param [config.logLevel] log level to apply on the logger (if unset or default)
- * @returns {Promise}
- */
-<span class="fstat-no" title="function not covered">function create(args, config) {</span>
-<span class="cstat-no" title="statement not covered">  return new Promise(resolve =&gt; <span class="cstat-no" title="statement not covered">resolve(new _phantom2.default(args, config)))</span>;</span>
+    constructor<span class="fstat-no" title="function not covered">(target, name, params = []) {</span>
+<span class="cstat-no" title="statement not covered">        this.id = NEXT_ID++;</span>
+<span class="cstat-no" title="statement not covered">        this.target = target;</span>
+<span class="cstat-no" title="statement not covered">        this.name = name;</span>
+<span class="cstat-no" title="statement not covered">        this.params = params;</span>
+<span class="cstat-no" title="statement not covered">        this.deferred = null;</span>
+    }
 }
-&nbsp;
-<span class="cstat-no" title="statement not covered">exports.default = { create };</span>
-&nbsp;
-&nbsp;
-<span class="cstat-no" title="statement not covered">module.exports.create = create;</span>
+exports.default = Command;
 &nbsp;</pre></td></tr>
 </tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 13:25:49 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 16:50:05 GMT+0000 (UTC)</div>
 </div>
 
 
