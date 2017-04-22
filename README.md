@@ -1,4 +1,7 @@
-# test coverage for  [phantom (v4.0.2)](https://github.com/amir20/phantomjs-node)  [![npm package](https://img.shields.io/npm/v/npmtest-phantom.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-phantom) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-phantom.svg)](https://travis-ci.org/npmtest/node-npmtest-phantom)
+# npmtest-phantom
+
+#### basic test coverage for  [phantom (v4.0.2)](https://github.com/amir20/phantomjs-node)  [![npm package](https://img.shields.io/npm/v/npmtest-phantom.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-phantom) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-phantom.svg)](https://travis-ci.org/npmtest/node-npmtest-phantom)
+
 #### PhantomJS integration module for NodeJS
 
 [![NPM](https://nodei.co/npm/phantom.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/phantom)
@@ -117,7 +120,8 @@
         "pretest": "gulp build:test",
         "test": "npm run lint && jest"
     },
-    "version": "4.0.2"
+    "version": "4.0.2",
+    "bin": {}
 }
 ```
 
